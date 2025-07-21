@@ -8,7 +8,7 @@ const Container = lazy(() => import("./pages/index.jsx"));
 const HomePage = lazy(() => import("./pages/home/index.jsx"));
 const AboutPage = lazy(() => import("./pages/about/index.jsx"));
 const ContactPage = lazy(() => import("./pages/contact/index.jsx"));
-const SupportPage = lazy(() => import("./pages/about/index.jsx"));
+const SupportPage = lazy(() => import("./pages/support/index.jsx"));
 
 export default function App() {
   return (
