@@ -1,17 +1,16 @@
 import { Link } from 'gatsby'
 import giphyAPI from 'giphy-js-sdk-core'
 import PropTypes from 'prop-types'
-import { Component } from 'react'
+import React from 'react'
 import Button from '../components/atoms/Button'
 import SEO from '../components/atoms/SEO'
 import * as styles from './404.module.css'
-
 // Famous last words:
 // "It's just the 404 page so why not expose the dev API key"
 const giphyClient = giphyAPI('LfXRwufRyt6PK414G2kKJBv3L8NdnxyR')
 const tag = 'fail-cat'
 
-export default class NotFound extends Component {
+export default class NotFound extends React.Component {
   state = { gif: '' }
 
   static propTypes = {
