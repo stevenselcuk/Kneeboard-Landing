@@ -1,7 +1,6 @@
-import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
-import styles from './Page.module.css'
 import SEO from '../components/atoms/SEO'
+import * as styles from './Page.module.css'
 
 const components = {
   pre: (props) => <div {...props} />,
@@ -20,7 +19,7 @@ const PageTemplate = (props) => {
           {props.children}
         </div>
       </MDXProvider>
-      </>
+    </>
   )
 }
 

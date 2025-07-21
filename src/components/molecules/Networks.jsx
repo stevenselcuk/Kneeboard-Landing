@@ -1,10 +1,10 @@
-import React, { memo } from 'react'
 import PropTypes from 'prop-types'
+import { memo } from 'react'
 import posed from 'react-pose'
-import { moveInTop } from '../atoms/Transitions'
-import Icon from '../atoms/Icon'
 import { useApp } from '../../hooks/use-app'
-import styles from './Networks.module.css'
+import Icon from '../atoms/Icon'
+import { moveInTop } from '../atoms/Transitions'
+import * as styles from './Networks.module.css'
 
 const linkClasses = (key) =>
   key === 'Mail' ? `u-email ${styles.link}` : `u-url ${styles.link}`

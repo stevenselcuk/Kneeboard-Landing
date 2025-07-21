@@ -1,10 +1,10 @@
-import React, { memo } from 'react'
 import PropTypes from 'prop-types'
+import React, { memo } from 'react'
+import SEO from '../components/atoms/SEO'
 import { useApp } from '../hooks/use-app'
 import { useMeta } from '../hooks/use-meta'
-import SEO from '../components/atoms/SEO'
-import styles from './index.module.css'
 import { ReactComponent as DownloadBadge } from '../images/DownloadBadgeDark.svg'
+import * as styles from './index.module.css'
 
 Home.propTypes = {
   pageContext: PropTypes.object.isRequired
@@ -15,7 +15,7 @@ function Home({ pageContext }) {
   const meta = useMeta()
 
   const image = `.${meta.img.childImageSharp.resize.src}`
-
+  React.useEffect(() => {}, [])
   return (
     <>
       <SEO title={basics.name} description={basics.label} />

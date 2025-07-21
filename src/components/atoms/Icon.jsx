@@ -1,31 +1,31 @@
-import React, { memo } from 'react'
 import PropTypes from 'prop-types'
+import { memo } from 'react'
 
 // https://featherstyles.com
 // import * as Feather from 'react-feather'
 import {
   ArrowDownCircle,
-  Edit,
-  GitHub,
-  Twitter,
-  Rss,
-  Sun,
-  Moon,
-  Compass,
-  FileText,
-  Key,
-  Image,
-  Mail,
-  MapPin,
-  Globe,
-  Briefcase,
   Award,
   BookOpen,
-  Star,
-  Info,
+  Briefcase,
+  Compass,
   Dribbble,
+  Edit,
+  FileText,
+  GitHub,
+  Globe,
+  Image,
+  Info,
+  Key,
+  Mail,
+  MapPin,
+  Moon,
+  Rss,
+  Star,
+  Sun,
+  Twitter
 } from 'react-feather'
-import styles from './Icon.module.css'
+import * as styles from './Icon.module.css'
 
 const Icon = memo(({ name, ...props }) => {
   const components = {

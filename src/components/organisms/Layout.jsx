@@ -1,49 +1,70 @@
+import { AnimatePresence, motion } from 'framer-motion'
 import React from 'react'
-import PropTypes from 'prop-types'
-import posed, { PoseGroup } from 'react-pose'
-import shortid from 'shortid'
-import { fadeIn, moveInBottom } from '../atoms/Transitions'
-import Navbar from './Navbar'
 import Footer from './Footer'
-import styles from './Layout.module.css'
-
-// https://github.com/welldone-software/why-did-you-render
-if (process.env.NODE_ENV !== 'production') {
-  // eslint-disable-next-line
-  const whyDidYouRender = require('@welldone-software/why-did-you-render/dist/no-classes-transpile/umd/whyDidYouRender.min.js')
-  whyDidYouRender(React)
-}
-
-Layout.propTypes = {
-  children: PropTypes.any.isRequired,
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired
-  }).isRequired
-}
+import * as styles from './Layout.module.css'
+import Navbar from './Navbar'
 
 export default function Layout({ children, location }) {
-  const timeout = 200
-  const RoutesContainer = posed.div(fadeIn)
-  const AnimatedContainer = posed.div(moveInBottom)
-  const isHomepage =
-    location.pathname === '/' ||
-    location.pathname === '/offline-plugin-app-shell-fallback/'
+  // Animasyon süresi (milisaniye cinsinden)
+  const transitionDuration = 0.3 // 0.3 saniye
 
+  // Framer Motion için animasyon varyantları oluşturuyoruz.
+  // Bu, eski `fadeIn` ve `moveInBottom` geçişlerinizin yerini alır.
+  const pageVariants = {
+    // Sayfa ilk yüklendiğinde veya yeni sayfa geldiğinde
+    initial: {
+      opacity: 0,
+      y: 20 // Aşağıdan gelme efekti için
+    },
+    // Sayfa ekrana geldiğinde
+    in: {
+      opacity: 1,
+      y: 0
+    },
+    // Sayfa ekrandan ayrılırken
+    out: {
+      opacity: 0,
+      y: -20 // Yukarı doğru kaybolma efekti için
+    }
+  }
+
+  // Animasyon geçiş ayarları
+  const pageTransition = {
+    type: 'tween', // Yumuşak bir geçiş türü
+    ease: 'anticipate', // Biraz daha dinamik bir ease efekti
+    duration: transitionDuration
+  }
+
+  React.useEffect(() => {
+    // hook
+    // ...
+  }, [])
   return (
     <>
       <Navbar />
-      <PoseGroup animateOnMount={process.env.NODE_ENV !== 'test' && true}>
-        <RoutesContainer
-          key={shortid.generate()}
-          delay={timeout}
-          delayChildren={timeout}
+      {/* 
+        AnimatePresence, bileşenler DOM'dan kaldırılırken animasyonların 
+        çalışmasını sağlar. 'mode="wait"' ise yeni sayfanın gelmeden önce
+        eski sayfanın çıkış animasyonunu tamamlamasını bekler.
+      */}
+      <AnimatePresence mode="wait">
+        {/*
+          'motion.div', animasyon ekleyebileceğimiz bir div elemanıdır.
+          'key' prop'u, Framer Motion'a hangi bileşenin değiştiğini söyler.
+          Sayfa değişimlerinde location.pathname kullanmak en iyi pratiktir.
+        */}
+        <motion.div
+          key={location.pathname}
+          initial="initial"
+          animate="in"
+          exit="out"
+          variants={pageVariants}
+          transition={pageTransition}
           className={styles.screen}
         >
-          <AnimatedContainer className={styles.wrapper}>
-            {children}
-          </AnimatedContainer>
-        </RoutesContainer>
-      </PoseGroup>
+          <div className={styles.wrapper}>{children}</div>
+        </motion.div>
+      </AnimatePresence>
       <Footer />
     </>
   )

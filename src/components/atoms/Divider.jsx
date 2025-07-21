@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './Divider.module.css'
-
+import * as styles from './Divider.module.css'
 const Divider = () => {
+  React.useEffect(() => {}, [])
   return <div className={styles.divider}></div>
 }
 

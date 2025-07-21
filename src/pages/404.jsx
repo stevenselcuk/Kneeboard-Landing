@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import giphyAPI from 'giphy-js-sdk-core'
-import SEO from '../components/atoms/SEO'
+import PropTypes from 'prop-types'
+import { Component } from 'react'
 import Button from '../components/atoms/Button'
-import styles from './404.module.css'
+import SEO from '../components/atoms/SEO'
+import * as styles from './404.module.css'
 
 // Famous last words:
 // "It's just the 404 page so why not expose the dev API key"

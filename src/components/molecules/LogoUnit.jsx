@@ -1,9 +1,6 @@
-import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import posed from 'react-pose'
-import { moveInBottom } from '../atoms/Transitions'
-import styles from './LogoUnit.module.css'
-import { useApp } from '../../hooks/use-app'
+import { memo } from 'react'
+import * as styles from './LogoUnit.module.css'
 
 LogoUnit.propTypes = {
   minimal: PropTypes.bool,
@@ -11,17 +8,12 @@ LogoUnit.propTypes = {
 }
 
 function LogoUnit({ minimal }) {
-
-
   return (
-      <div className={minimal ? styles.minimal : styles.logounit}>
-        {
-          /*
+    <div className={minimal ? styles.minimal : styles.logounit}>
+      {/*
             <p className={`p-job-title ${styles.description}`}>Find👋🏻</p>
-          */
-        }
-      
-      </div>
+          */}
+    </div>
   )
 }
 

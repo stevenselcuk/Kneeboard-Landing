@@ -45,12 +45,7 @@ module.exports = {
         path: path.join(__dirname, 'src', 'images')
       }
     },
-    {
-      resolve: 'gatsby-plugin-svgr',
-      options: {
-        icon: true
-      }
-    },
+    'gatsby-plugin-svgr',
     {
       resolve: 'gatsby-plugin-mdx',
       options: {

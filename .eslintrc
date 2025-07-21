@@ -1,18 +1,28 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    "plugin:testing-library/recommended",
-    "plugin:testing-library/react"
+    "plugin:react/jsx-runtime",
+    "plugin:prettier/recommended"
   ],
-  "plugins": ["react", "graphql", "prettier", "react-hooks", "testing-library"],
+  "plugins": [
+    "react",
+    "graphql",
+    "prettier",
+    "react-hooks"
+  ],
   "parserOptions": {
+    "ecmaVersion": "latest",
     "sourceType": "module",
+    "requireConfigFile": false,
     "ecmaFeatures": {
-      "jsx": true,
-      "modules": true
+      "jsx": true
+    },
+    "babelOptions": {
+      "presets": [
+        "@babel/preset-react"
+      ]
     }
   },
   "env": {
@@ -22,16 +32,25 @@
     "jest": true
   },
   "rules": {
-    "quotes": ["error", "single"],
-    "semi": ["error", "never"],
-    "object-curly-spacing": ["error", "always"],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
     "prettier/prettier": "error",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"
   },
   "settings": {
     "react": {
-      "version": "16"
+      "version": "detect"
     }
   }
 }

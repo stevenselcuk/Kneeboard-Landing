@@ -1,9 +1,8 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import posed from 'react-pose'
-import { fadeIn } from '../atoms/Transitions'
 import { useMeta } from '../../hooks/use-meta'
-import styles from './Availability.module.css'
+import { fadeIn } from '../atoms/Transitions'
+import * as styles from './Availability.module.css'
 
 const Animation = posed.aside(fadeIn)
 

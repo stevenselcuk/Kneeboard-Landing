@@ -23,7 +23,7 @@ function truncate(n, useWordBoundary) {
 
 exports.onPreBootstrap = async () => {
   try {
-    console.log(chalk.green('success ') + 'Running')
+    console.log('Running')
   } catch (error) {
     throw Error(error.message)
   }
