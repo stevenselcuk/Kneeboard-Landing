@@ -1,47 +1,16 @@
-import PropTypes from 'prop-types'
-import React, { memo } from 'react'
-import SEO from '../components/atoms/SEO'
-import { useApp } from '../hooks/use-app'
-import { useMeta } from '../hooks/use-meta'
-import { ReactComponent as DownloadBadge } from '../images/DownloadBadgeDark.svg'
-import * as styles from './index.module.css'
-
-Home.propTypes = {
-  pageContext: PropTypes.object.isRequired
-}
-
-function Home({ pageContext }) {
-  const { basics } = useApp()
-  const meta = useMeta()
-
-  const image = `.${meta.img.childImageSharp.resize.src}`
-  React.useEffect(() => {}, [])
+import ErrorBoundary from "@/components/ErrorBoundary";
+import Footer from "@/components/footer";
+import Header from "@/components/header";
+import { Outlet } from "react-router-dom";
+const PageWrapper = () => {
   return (
-    <>
-      <SEO title={basics.name} description={basics.label} />
-      <div className={styles.hero}>
-        <div className={styles.details}>
-          <div className={styles.hugetitle}>checklist</div>
-          <div className={styles.desc}>{basics.summary}</div>
-          <div className={styles.badge}>
-            <a
-              href={basics.storeUrl}
-              title="Get Checklist App on the App Store"
-            >
-              <DownloadBadge />
-            </a>
-          </div>
-        </div>
-
-        <img
-          src={image}
-          className={styles.productimage}
-          alt="iPad Pro 5th generation"
-          title="Checklist for General Aviation Pilots"
-        />
+    <ErrorBoundary>
+      <div className="page-wrapper bg-dot">
+        <Header />
+        <Outlet />
+        <Footer />
       </div>
-    </>
-  )
-}
-
-export default memo(Home)
+    </ErrorBoundary>
+  );
+};
+export default PageWrapper;
