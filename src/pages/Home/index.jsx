@@ -1,5 +1,5 @@
 import ErrorBoundary from "@/components/ErrorBoundary";
-import HeroSection from "@/Pages/Home/Components/hero-section";
+import HeroSection from "@/pages/home/Components/hero-section";
 import { memo, useEffect, useRef } from "react";
 import Helmet from "react-helmet";
 import CallToAction from "./Components/call-to-action";
