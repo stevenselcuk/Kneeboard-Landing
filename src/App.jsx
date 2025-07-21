@@ -3,11 +3,12 @@ import { Spinner } from "@/components/ui/kibo-ui/spinner";
 import Trackker from "@/utils/tracker";
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-const Container = lazy(() => import("./Pages"));
-const HomePage = lazy(() => import("./Pages/Home"));
-const AboutPage = lazy(() => import("./Pages/About"));
-const ContactPage = lazy(() => import("./Pages/Contact"));
-const SupportPage = lazy(() => import("./Pages/About"));
+
+const Container = lazy(() => import("./Pages/index.jsx"));
+const HomePage = lazy(() => import("./Pages/Home/index.jsx"));
+const AboutPage = lazy(() => import("./Pages/About/index.jsx"));
+const ContactPage = lazy(() => import("./Pages/Contact/index.jsx"));
+const SupportPage = lazy(() => import("./Pages/About/index.jsx"));
 
 export default function App() {
   return (
