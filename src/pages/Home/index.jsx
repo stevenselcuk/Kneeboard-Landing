@@ -41,10 +41,14 @@ const LandingPage = () => {
     <ErrorBoundary>
       <Helmet>
         <title>
-          Checklist - Build and Deliver QRH, AFM or checklist to cockpit iPad
+          kneeboard - Best in-flight note taking iPad App for your Electronic
+          Flight Bag
         </title>
-        <meta name="description" content="Checklist App for Pilots" />
-        <link rel="canonical" href="https://cockpitcheck.com" />
+        <meta
+          name="description"
+          content="Kneeboard iOS App for Pilots, Electronic Flight Bag App"
+        />
+        <link rel="canonical" href="https://kneeboard.tabbythecat.com" />
       </Helmet>
 
       <HeroSection />
@@ -55,17 +59,6 @@ const LandingPage = () => {
       <Features9 />
       <Faq4 />
       <CallToAction />
-      {/*<div className="container" ref={containerRef}>
-        <h1 className="h1">
-          Level up your animations with the all-in membership
-        </h1>
-      </div>
-     <div className="main-wrapper">
-        <h1>Deliver anywhere from your base</h1>
-        <Suspense fallback={<div>Loading...</div>}>
-          <World data={sampleArcs} globeConfig={globeConfig} />
-        </Suspense>
-      </div> */}
     </ErrorBoundary>
   );
 };

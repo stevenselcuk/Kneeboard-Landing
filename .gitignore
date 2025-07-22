@@ -3,9 +3,7 @@
 node_modules
 yarn-error.log
 
-# Build directory
-/public
-
+dist
 npm-debug.log*
 yarn-debug.log*
 plugins/gatsby-plugin-matomo

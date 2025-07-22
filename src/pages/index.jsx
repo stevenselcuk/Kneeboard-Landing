@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 const PageWrapper = () => {
   return (
     <ErrorBoundary>
-      <div className="page-wrapper bg-dot">
+      <div className="page-wrapper bg-grid-pattern">
         <Header />
         <Outlet />
         <Footer />

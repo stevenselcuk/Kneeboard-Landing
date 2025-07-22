@@ -128,12 +128,15 @@ My Custom Stuff
 }
 
 .bg-grid-pattern {
-  background-image: linear-gradient(90deg, #0000001a 1px, #0000 0),
-    linear-gradient(#0000001a 1px, #0000 0);
-  /* Tailwind ile uyum için background-size eklemek iyi bir fikir olabilir */
+  /* Daha okunaklı olması için rgba(0, 0, 0, 0.4) kullandık */
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 0
+    ),
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 0);
   background-size: 20px 20px;
 }
-
 /* Dot atıyor */
 .bg-dot {
   background-image: radial-gradient(#0000001a 1px, #0000 0);
