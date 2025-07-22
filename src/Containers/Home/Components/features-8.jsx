@@ -96,8 +96,7 @@ export default function FeaturesSection() {
                     Secure by default
                   </h2>
                   <p className="text-foreground">
-                    Provident fugit and vero voluptate. magnam magni doloribus
-                    dolores voluptates a sapiente nisi.
+                    Offline, self-contained, stable
                   </p>
                 </div>
               </CardContent>

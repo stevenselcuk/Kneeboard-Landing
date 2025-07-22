@@ -113,7 +113,9 @@ export default function HeroSection() {
                   as="p"
                   className="mx-auto mt-8 max-w-2xl text-balance text-lg"
                 >
-                  kneeboard is easy in-flight note-taking iOS app
+                  kneeboard is easy in-flight note-taking with Apple Pencil iOS
+                  app for your cockpit iPad. Built by your fellow pilots for
+                  pilots.
                 </TextEffect>
 
                 <AnimatedGroup
@@ -175,19 +177,19 @@ export default function HeroSection() {
               <div className="relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
                 <div
                   aria-hidden
-                  className="bg-linear-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
+                  className="bg-linear-to-b to-background absolute inset-0 z-10 from-transparent from-100%"
                 />
-                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
+                <div className="relative mx-auto max-w-6xl overflow-hidden">
                   <img
                     className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
-                    src="https://g-eumewdyjmse.vusercontent.net/placeholder.svg"
+                    src="/ipad-hero.png"
                     alt="app screen"
                     width="2700"
                     height="auto"
                   />
                   <img
                     className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden"
-                    src="https://g-eumewdyjmse.vusercontent.net/placeholder.svg"
+                    src="/ipad-hero.png"
                     alt="app screen"
                     width="2700"
                     height="auto"

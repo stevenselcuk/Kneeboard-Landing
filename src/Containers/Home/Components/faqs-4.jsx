@@ -21,9 +21,9 @@ export default function FAQsFour() {
     },
     {
       id: "item-3",
-      question: "Can I change or cancel my order?",
+      question: "Do I need Apple Pencil?",
       answer:
-        "You can modify or cancel your order within 1 hour of placing it. After this window, please contact our customer support team who will assist you with any changes.",
+        "Yes, you will need Apple Pencil to use kneeboard. We are planning to add also finger support but taking notes by using finger lowers readability and takes longer time to write.",
     },
     {
       id: "item-4",
@@ -33,9 +33,15 @@ export default function FAQsFour() {
     },
     {
       id: "item-5",
-      question: "What is your return policy?",
+      question: "Any discount for fleet EFB?",
       answer:
-        "We offer a 30-day return policy for most items. Products must be in original condition with tags attached. Some specialty items may have different return terms, which will be noted on the product page.",
+        "Sure, we have special fleet discount if you have more than 10 devices. Please contact with sales@tabbythecat.com ",
+    },
+    {
+      id: "item-6",
+      question: "We need custom solutions, can you help?",
+      answer:
+        "As Tabby Cat, we are building custom solution for your fleet and specialized in aviation IT. Please contact with sales@tabbythecat.com ",
     },
   ];
 
