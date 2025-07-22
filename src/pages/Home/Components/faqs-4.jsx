@@ -27,9 +27,9 @@ export default function FAQsFour() {
     },
     {
       id: "item-4",
-      question: "Do you ship internationally?",
+      question: "Can I use my own templates?",
       answer:
-        "Yes, we ship to over 50 countries worldwide. International shipping typically takes 7-14 business days. Additional customs fees may apply depending on your country's import regulations.",
+        "Of course, kneeboard™ is fully customizable. Create your template on your favorite design application and add your kneeboard as png or pdf.",
     },
     {
       id: "item-5",
@@ -47,8 +47,8 @@ export default function FAQsFour() {
             Frequently Asked Questions
           </h2>
           <p className="text-muted-foreground mt-4 text-balance">
-            Discover quick and comprehensive answers to common questions about
-            our platform, services, and features.
+            Discover quick and comprehensive answers to common questions about{" "}
+            <b>kneeboard</b>™
           </p>
         </div>
 
@@ -78,7 +78,10 @@ export default function FAQsFour() {
 
           <p className="text-muted-foreground mt-6 px-8">
             Can't find what you're looking for? Contact our{" "}
-            <a href="#" className="text-primary font-medium hover:underline">
+            <a
+              href="mailto:support@tabbythecat.com"
+              className="text-primary font-medium hover:underline"
+            >
               customer support team
             </a>
           </p>
