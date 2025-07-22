@@ -3,7 +3,7 @@ import { Spinner } from "@/components/ui/kibo-ui/spinner";
 import Trackker from "@/utils/tracker";
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-const Container = lazy(() => import("Pages"));
+const Container = lazy(() => import("Pages/index.jsx"));
 const HomePage = lazy(() => import("Pages/Home"));
 const AboutPage = lazy(() => import("Pages/About"));
 const ContactPage = lazy(() => import("Pages/Contact"));
