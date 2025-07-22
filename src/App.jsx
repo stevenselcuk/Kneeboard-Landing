@@ -1,11 +1,11 @@
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { Spinner } from "@/components/ui/kibo-ui/spinner";
+import AboutPage from "@/Containers/About/";
+import ContactPage from "@/Containers/Contact/";
+import HomePage from "@/Containers/Home/";
+import Container from "@/Containers/index.jsx";
+import SupportPage from "@/Containers/Support/";
 import Trackker from "@/utils/tracker";
-import AboutPage from "Pages/About/";
-import ContactPage from "Pages/Contact/";
-import HomePage from "Pages/Home/";
-import Container from "Pages/index.jsx";
-import SupportPage from "Pages/Support/";
 import { Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
