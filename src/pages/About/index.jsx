@@ -7,7 +7,7 @@ import ContentFour from "./Components/content-4";
 import ContentFive from "./Components/content-5";
 import ContentSix from "./Components/content-6";
 import ContentSeven from "./Components/content-7";
-const About = () => {
+export default function About() {
   return (
     <ErrorBoundary>
       <Helmet>
@@ -28,6 +28,4 @@ const About = () => {
       </div>
     </ErrorBoundary>
   );
-};
-
-export default About;
+}

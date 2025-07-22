@@ -1,13 +1,13 @@
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { Spinner } from "@/components/ui/kibo-ui/spinner";
-import AboutPage from "@/pages/about/index.jsx";
-import ContactPage from "@/pages/contact/index.jsx";
-import HomePage from "@/pages/home/index.jsx";
-import Container from "@/pages/index.jsx";
-import SupportPage from "@/pages/support/index.jsx";
 import Trackker from "@/utils/tracker";
-import { Suspense } from "react";
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+const Container = lazy(() => import("./Pages"));
+const HomePage = lazy(() => import("./Pages/Home"));
+const AboutPage = lazy(() => import("./Pages/About"));
+const ContactPage = lazy(() => import("./Pages/Contact"));
+const SupportPage = lazy(() => import("./Pages/About"));
 
 export default function App() {
   return (
