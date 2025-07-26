@@ -7,8 +7,8 @@ import React from "react";
 const menuItems = [
   { name: "Features", href: "#a" },
   { name: "Solution", href: "#a" },
-  { name: "Pricing", href: "#a" },
-  { name: "About", href: "/about" },
+  { name: "Support", href: "/support" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const HeroHeader = () => {

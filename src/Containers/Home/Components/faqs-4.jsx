@@ -8,43 +8,30 @@ import {
 export default function FAQsFour() {
   const faqItems = [
     {
-      id: "item-1",
-      question: "How long does shipping take?",
-      answer:
-        "Standard shipping takes 3-5 business days, depending on your location. Express shipping options are available at checkout for 1-2 business day delivery.",
-    },
-    {
-      id: "item-2",
-      question: "What payment methods do you accept?",
-      answer:
-        "We accept all major credit cards (Visa, Mastercard, American Express), PayPal, Apple Pay, and Google Pay. For enterprise customers, we also offer invoicing options.",
-    },
-    {
       id: "item-3",
-      question: "Do I need Apple Pencil?",
+      question: "Is an Apple Pencil required?",
       answer:
-        "Yes, you will need Apple Pencil to use kneeboard. We are planning to add also finger support but taking notes by using finger lowers readability and takes longer time to write.",
+        "For the most precise and authentic note-taking experience, Kneeboard™ is optimized for the Apple Pencil. It provides the clarity and speed of writing on paper. While support for finger input is on our roadmap, we highly recommend the Apple Pencil to unlock the app's full potential.",
     },
     {
       id: "item-4",
-      question: "Can I use my own templates?",
+      question: "Can I import my own templates?",
       answer:
-        "Of course, kneeboard™ is fully customizable. Create your template on your favorite design application and add your kneeboard as png or pdf.",
+        "Absolutely. Customization is a core feature of Kneeboard™. You can design your own templates using any external tool and seamlessly import them as PNG or PDF files to make your kneeboard truly your own.",
     },
     {
       id: "item-5",
-      question: "Any discount for fleet EFB?",
+      question: "Do you offer discounts for fleet or bulk purchases?",
       answer:
-        "Sure, we have special fleet discount if you have more than 10 devices. Please contact with sales@tabbythecat.com ",
+        "Yes, we provide special pricing for fleet-wide EFB deployments. If you are looking to equip 10 or more devices, please get in touch with us at sales@tabbythecat.com to discuss your requirements and receive a tailored offer.",
     },
     {
       id: "item-6",
-      question: "We need custom solutions, can you help?",
+      question: "Our airline/MRO needs a custom solution. Can you help?",
       answer:
-        "As Tabby Cat, we are building custom solution for your fleet and specialized in aviation IT. Please contact with sales@tabbythecat.com ",
+        "Definitely. As specialists in aviation IT, we excel at developing bespoke solutions to meet the unique operational needs of your fleet. To explore custom development options, please reach out to our solutions team at sales@tabbythecat.com.",
     },
   ];
-
   return (
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-5xl px-4 md:px-6">
@@ -83,13 +70,21 @@ export default function FAQsFour() {
           </Accordion>
 
           <p className="text-muted-foreground mt-6 px-8">
-            Can't find what you're looking for? Contact our{" "}
+            Can't find what you're looking for? See{" "}
+            <a
+              href="/support"
+              className="text-primary font-medium hover:underline"
+            >
+              support page
+            </a>{" "}
+            or contact our{" "}
             <a
               href="mailto:support@tabbythecat.com"
               className="text-primary font-medium hover:underline"
             >
               customer support team
             </a>
+            .
           </p>
         </div>
       </div>

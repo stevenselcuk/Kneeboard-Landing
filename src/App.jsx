@@ -4,10 +4,12 @@ import AboutPage from "@/Containers/About/";
 import ContactPage from "@/Containers/Contact/";
 import HomePage from "@/Containers/Home/";
 import Container from "@/Containers/index.jsx";
+import TermsPage from "@/Containers/Legal/TermsPage";
 import SupportPage from "@/Containers/Support/";
 import Trackker from "@/utils/tracker";
 import { Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import PrivacyPolicyPage from "./Containers/Legal/PrivacyPolicyPage";
 
 export default function App() {
   return (
@@ -24,6 +26,8 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Container />}>
               <Route index element={<HomePage />} />
+              <Route path="/terms" element={<TermsPage />} />
+              <Route path="/privacy" element={<PrivacyPolicyPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/support" element={<SupportPage />} />
               <Route path="/contact" element={<ContactPage />} />

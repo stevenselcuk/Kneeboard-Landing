@@ -41,8 +41,8 @@ const LandingPage = () => {
     <ErrorBoundary>
       <Helmet>
         <title>
-          kneeboard - Best in-flight note taking iPad App for your Electronic
-          Flight Bag
+          Kneeboard - In-flight, brief and debrief note taking iPad App for your
+          Electronic Flight Bag
         </title>
         <meta
           name="description"

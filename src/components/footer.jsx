@@ -10,20 +10,20 @@ const as = [
     href: "#",
   },
   {
-    title: "Customers",
-    href: "#",
+    title: "Terms and Conditions",
+    href: "/terms",
   },
   {
-    title: "Pricing",
-    href: "#",
+    title: "Privacy Policy",
+    href: "/privacy",
   },
   {
-    title: "Help",
-    href: "#",
+    title: "Support",
+    href: "/support",
   },
   {
-    title: "About",
-    href: "#",
+    title: "Contact",
+    href: "/contact",
   },
 ];
 
