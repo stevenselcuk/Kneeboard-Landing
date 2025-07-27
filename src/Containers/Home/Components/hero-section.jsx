@@ -22,7 +22,7 @@ const transitionVariants = {
   },
 };
 
-export default function HeroSection() {
+export default function HeroSection({ onScrollToFeatures }) {
   return (
     <>
       <main className="overflow-hidden">
@@ -142,7 +142,7 @@ export default function HeroSection() {
                       className="rounded-xl px-5 text-base"
                     >
                       <a href="#a">
-                        <span className="text-nowrap">Download Now</span>
+                        <span className="text-nowrap">Get the App</span>
                       </a>
                     </Button>
                   </div>
@@ -151,11 +151,10 @@ export default function HeroSection() {
                     asChild
                     size="lg"
                     variant="ghost"
-                    className="h-10.5 rounded-xl px-5"
+                    className="h-10.5 rounded-xl px-5 cursor-pointer"
+                    onClick={onScrollToFeatures}
                   >
-                    <a href="#a">
-                      <span className="text-nowrap">Request a demo</span>
-                    </a>
+                    <span className="text-nowrap">Explore More</span>
                   </Button>
                 </AnimatedGroup>
               </div>

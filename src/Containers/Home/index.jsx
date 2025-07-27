@@ -14,7 +14,11 @@ import { animate, stagger } from "motion";
 import { splitText } from "motion-plus";
 const LandingPage = () => {
   const containerRef = useRef(null);
+  const featuresRef = useRef(null);
 
+  const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
   useEffect(() => {
     document.fonts.ready.then(() => {
       if (!containerRef.current) return;
@@ -51,8 +55,8 @@ const LandingPage = () => {
         <link rel="canonical" href="https://kneeboard.tabbythecat.com" />
       </Helmet>
 
-      <HeroSection />
-      <Features11 />
+      <HeroSection onScrollToFeatures={() => scrollToSection(featuresRef)} />
+      <Features11 featuresRef={featuresRef} />
       <Features12 />
       <Features6 />
       <Features8 />

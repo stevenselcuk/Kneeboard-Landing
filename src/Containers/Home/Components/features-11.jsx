@@ -2,9 +2,12 @@ import ChartPlaceHolder from "@/assets/images/chart.jpeg";
 import PaymentPlaceHolder from "@/assets/images/payment.jpeg";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Globe } from "lucide-react";
-export default function Features() {
+export default function Features({ featuresRef }) {
   return (
-    <section className="dark:bg-muted/25 bg-zinc-50 py-16 md:py-32">
+    <section
+      ref={featuresRef}
+      className="dark:bg-muted/25 bg-zinc-50 py-16 md:py-32"
+    >
       <div className="mx-auto max-w-5xl px-6">
         <div className="mx-auto grid gap-2 sm:grid-cols-5">
           <Card className="group overflow-hidden shadow-zinc-950/5 sm:col-span-3 sm:rounded-none sm:rounded-tl-xl">
