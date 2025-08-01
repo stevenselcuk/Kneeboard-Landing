@@ -22,10 +22,10 @@ import { useState } from "react";
 // This is the only place you need to edit for each app.
 // ==================================================================
 const APP_DATA = {
-  appName: "Aviation EFB Pro",
-  appDescription: "The all-in-one Electronic Flight Bag for pilots.",
-  contactEmail: "support@youraviationapp.com",
-  feedbackEmail: "feedback@youraviationapp.com",
+  appName: "Kneeboard",
+  appDescription: "Paperless cockpit solution for your electronic flight bag",
+  contactEmail: "support@tabbythecat.com",
+  feedbackEmail: "feedback@tabbythecat.com",
 
   // --- FREQUENTLY ASKED QUESTIONS (No changes here) ---
   faq: [
@@ -168,7 +168,7 @@ function GuidesContent() {
                 key={index}
                 variant="ghost"
                 className={cn(
-                  "w-full flex justify-start items-center text-left h-auto py-2",
+                  "w-full flex justify-start items-center text-left h-auto py-2 cursor-pointer",
                   selectedGuide.title === guide.title &&
                     "bg-accent text-accent-foreground"
                 )}
@@ -176,8 +176,8 @@ function GuidesContent() {
               >
                 {guide.icon}
                 <div>
-                  <p className="font-semibold">{guide.title}</p>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="font-semibold text-wrap">{guide.title}</p>
+                  <p className="text-xs text-muted-foreground text-wrap">
                     {guide.description}
                   </p>
                 </div>
@@ -269,13 +269,13 @@ export default function SupportPage() {
         <Tabs defaultValue="faq" className="w-full">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
             <TabsList>
-              <TabsTrigger value="faq">
+              <TabsTrigger value="faq" className="cursor-pointer">
                 <LifeBuoy className="w-4 h-4 mr-2" /> FAQ
               </TabsTrigger>
-              <TabsTrigger value="guides">
+              <TabsTrigger value="guides" className="cursor-pointer">
                 <BookOpen className="w-4 h-4 mr-2" /> Guides
               </TabsTrigger>
-              <TabsTrigger value="contact">
+              <TabsTrigger value="contact" className="cursor-pointer">
                 <Mail className="w-4 h-4 mr-2" /> Contact Us
               </TabsTrigger>
             </TabsList>

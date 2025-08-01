@@ -17,7 +17,7 @@ const TermsPage = () => {
 
   return (
     <section>
-      <div className="bg-background text-foreground min-h-screen pt-20">
+      <div className="text-foreground min-h-screen pt-20">
         <div className="container mx-auto max-w-4xl p-4 py-8 md:p-8">
           <Card>
             <CardHeader>
