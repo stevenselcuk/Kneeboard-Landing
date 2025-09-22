@@ -174,21 +174,25 @@ export default function HeroSection({ onScrollToFeatures }) {
                 ...transitionVariants,
               }}
             >
-              <div className="relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
+              <div className="relative -mr-56 mt-18 mb-18 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
                 <div
                   aria-hidden
                   className="bg-linear-to-b to-background absolute inset-0 z-10 from-transparent from-100%"
                 />
                 <div className="relative mx-auto max-w-6xl overflow-hidden">
                   <img
-                    className="bg-background relative hidden rounded-2xl dark:block"
+                    className="bg-background relative  mx-auto hidden rounded-2xl dark:block"
                     src="/filled_90.png"
                     alt="app screen"
+                    width="500"
+                    height="auto"
                   />
                   <img
-                    className="z-2 border-border/25 relative rounded-2xl border dark:hidden"
+                    className="z-2 border-border/25 relative mx-auto rounded-2xl border dark:hidden"
                     src="/filled_90.png"
                     alt="app screen"
+                    width="800"
+                    height="auto"
                   />
                 </div>
               </div>
