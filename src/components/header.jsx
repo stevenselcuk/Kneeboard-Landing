@@ -5,8 +5,10 @@ import { Menu, X } from "lucide-react";
 import React from "react";
 
 const menuItems = [
-  { name: "Features", href: "#a" },
-  { name: "Solution", href: "#a" },
+  {
+    name: "Get App",
+    href: "https://apps.apple.com/us/app/kneeboard-for-pilots/id6749446180",
+  },
   { name: "Support", href: "/support" },
   { name: "Contact", href: "/contact" },
 ];

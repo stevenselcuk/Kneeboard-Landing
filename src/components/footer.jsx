@@ -2,12 +2,8 @@ import { Logo } from "@/components/logo";
 
 const as = [
   {
-    title: "Features",
-    href: "#",
-  },
-  {
-    title: "Solution",
-    href: "#",
+    title: "Get App",
+    href: "https://apps.apple.com/us/app/kneeboard-for-pilots/id6749446180",
   },
   {
     title: "Terms and Conditions",

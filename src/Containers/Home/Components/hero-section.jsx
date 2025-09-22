@@ -142,7 +142,7 @@ export default function HeroSection({ onScrollToFeatures }) {
                       size="lg"
                       className="rounded-xl px-5 text-base"
                     >
-                      <a href="#a">
+                      <a href="https://apps.apple.com/us/app/kneeboard-for-pilots/id6749446180">
                         <span className="text-nowrap">Get the App</span>
                       </a>
                     </Button>
