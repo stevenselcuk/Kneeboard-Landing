@@ -90,30 +90,11 @@ const HeroHeader = () => {
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <Button
                   asChild
-                  variant="outline"
-                  size="sm"
-                  className={cn(isScrolled && "lg:hidden")}
-                >
-                  <a href="#">
-                    <span>Login</span>
-                  </a>
-                </Button>
-                <Button
-                  asChild
-                  size="sm"
-                  className={cn(isScrolled && "lg:hidden")}
-                >
-                  <a href="#">
-                    <span>Sign Up</span>
-                  </a>
-                </Button>
-                <Button
-                  asChild
                   size="sm"
                   className={cn(isScrolled ? "lg:inline-flex" : "hidden")}
                 >
-                  <a href="/contact">
-                    <span>Get Started</span>
+                  <a href="https://apps.apple.com/us/app/kneeboard-for-pilots/id6749446180">
+                    <span>Download App</span>
                   </a>
                 </Button>
               </div>
