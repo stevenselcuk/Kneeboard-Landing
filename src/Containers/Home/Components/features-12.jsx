@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
-export default function Features() {
+export default function Features({ featuresRef }) {
   const [activeItem, setActiveItem] = useState("item-1");
 
   const imgs = {
@@ -37,17 +37,16 @@ export default function Features() {
   };
 
   return (
-    <section className="py-12 md:py-20 lg:py-32">
+    <section className="py-12 md:py-20 lg:py-32" ref={featuresRef}>
       <div className="bg-linear-to-b absolute inset-0 -z-10 sm:inset-6 sm:rounded-b-3xl dark:block dark:to-[color-mix(in_oklab,var(--color-zinc-900)_75%,var(--color-background))]"></div>
       <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16 lg:space-y-20 dark:[--color-border:color-mix(in_oklab,var(--color-white)_10%,transparent)]">
         <div className="relative z-10 mx-auto max-w-2xl space-y-6 text-center">
           <h2 className="text-balance text-4xl font-semibold lg:text-6xl">
-            The foundation for AI
+            Everything You Need, Nothing You Don't.
           </h2>
           <p>
-            Lyra is evolving to be more than just the models. It supports an
-            entire to the APIs and platforms helping developers and businesses
-            innovate.
+            Kneeboard is built with a singular focus: to be the best digital
+            replacement for your paper kneeboard.
           </p>
         </div>
 
@@ -62,52 +61,60 @@ export default function Features() {
               <AccordionTrigger>
                 <div className="flex items-center gap-2 text-base">
                   <Database className="size-4" />
-                  Database Visualization
+                  Built-in Templates
                 </div>
               </AccordionTrigger>
               <AccordionContent>
-                Lyra is evolving to be more than just the models. It supports an
-                entire to the APIs and platforms helping developers and
-                businesses innovate.
+                Ready for Takeoff: Start with our built-in templates, including
+                Departure & Arrival brief cards, ATIS/AWOS worksheets, and
+                various note styles (lined, grid, dot, blank)
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
               <AccordionTrigger>
                 <div className="flex items-center gap-2 text-base">
                   <Fingerprint className="size-4" />
-                  Advanced Authentication
+                  Your Cockpit, Your Way
                 </div>
               </AccordionTrigger>
               <AccordionContent>
-                Lyra is evolving to be more than just the models. It supports an
-                entire to the APIs and platforms helping developers and
-                businesses innovate.
+                Import any PDF or PNG to use as a template. Your
+                aircraft-specific checklists, performance charts, or custom
+                layouts are always just a tap away.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
               <AccordionTrigger>
                 <div className="flex items-center gap-2 text-base">
                   <IdCard className="size-4" />
-                  Identity Management
+                  Cockpit Organization, Perfected
                 </div>
               </AccordionTrigger>
               <AccordionContent>
-                Lyra is evolving to be more than just the models. It supports an
-                entire to the APIs and platforms helping developers and
-                businesses innovate.
+                <b>Find Anything, Instantly:</b> All your notes are saved and
+                searchable. Give them custom names, filter by category, or pull
+                up your favorites in a dedicated section. <br />
+                <br />
+                <b>Categorize Your Flights:</b> Create custom categories like
+                "Training," "Cross-Country," or by aircraft tail number to keep
+                your logbook organized and tidy.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">
               <AccordionTrigger>
                 <div className="flex items-center gap-2 text-base">
                   <ChartBarIncreasingIcon className="size-4" />
-                  Analytics Dashboard
+                  Share & Archive with Ease
                 </div>
               </AccordionTrigger>
               <AccordionContent>
-                Lyra is evolving to be more than just the models. It supports an
-                entire to the APIs and platforms helping developers and
-                businesses innovate.
+                <b>Professional PDF Exports:</b> With a single tap, export any
+                note as a high-quality PDF. It merges your handwriting and the
+                template into a clean, professional document. <br />
+                <br />
+                <b>Log & Debrief:</b> Perfect for student pilots to share with
+                CFIs, for logging flight details, or for personal
+                record-keeping.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

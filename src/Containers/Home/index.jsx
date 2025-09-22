@@ -1,5 +1,7 @@
 import ErrorBoundary from "@/components/ErrorBoundary";
 import HeroSection from "@/Containers/Home/Components/hero-section";
+import { animate, stagger } from "motion";
+import { splitText } from "motion-plus";
 import { memo, useEffect, useRef } from "react";
 import Helmet from "react-helmet";
 import CallToAction from "./Components/call-to-action";
@@ -9,9 +11,7 @@ import Features12 from "./Components/features-12";
 import Features6 from "./Components/features-6";
 import Features8 from "./Components/features-8";
 import Features9 from "./Components/features-9";
-
-import { animate, stagger } from "motion";
-import { splitText } from "motion-plus";
+import Testimonals from "./Components/testimonials";
 const LandingPage = () => {
   const containerRef = useRef(null);
   const featuresRef = useRef(null);
@@ -56,13 +56,14 @@ const LandingPage = () => {
       </Helmet>
 
       <HeroSection onScrollToFeatures={() => scrollToSection(featuresRef)} />
-      <Features11 featuresRef={featuresRef} />
-      <Features12 />
+      <Features12 featuresRef={featuresRef} />
       <Features6 />
+      <Testimonals />
       <Features8 />
       <Features9 />
       <Faq4 />
       <CallToAction />
+      <Features11 />
     </ErrorBoundary>
   );
 };

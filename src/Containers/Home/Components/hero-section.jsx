@@ -1,7 +1,7 @@
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { Button } from "@/components/ui/button";
 import { TextEffect } from "@/components/ui/text-effect";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 const transitionVariants = {
   item: {
     hidden: {
@@ -113,9 +113,10 @@ export default function HeroSection({ onScrollToFeatures }) {
                   as="p"
                   className="mx-auto mt-8 max-w-2xl text-balance text-lg"
                 >
-                  kneeboard is easy in-flight note-taking with Apple Pencil iOS
-                  app for your cockpit iPad. Built by your fellow pilots for
-                  pilots.
+                  Kneeboard is the essential iPad app for pilots, transforming
+                  your flight bag with powerful, paperless note-taking. From
+                  pre-flight briefing to in-flight management, experience a
+                  smarter, cleaner, and more efficient cockpit.
                 </TextEffect>
 
                 <AnimatedGroup
@@ -198,7 +199,7 @@ export default function HeroSection({ onScrollToFeatures }) {
             </AnimatedGroup>
           </div>
         </section>
-        <section className="bg-background pb-16 pt-16 md:pb-32">
+        {/*<section className="bg-background pb-16 pt-16 md:pb-32">
           <div className="group relative m-auto max-w-5xl px-6">
             <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
               <a
@@ -287,7 +288,7 @@ export default function HeroSection({ onScrollToFeatures }) {
               </div>
             </div>
           </div>
-        </section>
+        </section>*/}
       </main>
     </>
   );

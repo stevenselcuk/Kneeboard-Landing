@@ -14,134 +14,159 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils"; // Shadcn's utility for conditional classes
-import { BookOpen, CheckSquare, LifeBuoy, Mail, Plane } from "lucide-react";
+import {
+  BookOpen,
+  CheckSquare,
+  LifeBuoy,
+  Mail,
+  Plane,
+  UploadCloud,
+} from "lucide-react";
 import { useState } from "react";
 
 // ==================================================================
 // ⚙️ CONFIGURATION AREA ⚙️
-// This is the only place you need to edit for each app.
+// Updated for the Kneeboard App
 // ==================================================================
 const APP_DATA = {
   appName: "Kneeboard",
-  appDescription: "Paperless cockpit solution for your electronic flight bag",
+  appDescription: "Smart notes and templates for the modern pilot.",
   contactEmail: "support@tabbythecat.com",
   feedbackEmail: "feedback@tabbythecat.com",
 
-  // --- FREQUENTLY ASKED QUESTIONS (No changes here) ---
+  // --- FREQUENTLY ASKED QUESTIONS ---
   faq: [
     {
-      question: "How do I create a new flight plan?",
+      question: "How do I create my own custom template?",
       answer:
-        "From the main dashboard, tap the 'New Flight Plan' button. Then, enter your departure and arrival airports. This screenshot shows the exact steps:",
-      screenshot: "/screenshots/BRIEFCARD_DEPARTURE.png",
+        "You have two great options. The easiest method is to create an A4 or US Letter sized document in an app like Google Docs, Microsoft Word, or Pages, and then export it as a PDF. For a pixel-perfect fit, you can create a PNG image with a resolution of 2064px (width) by 2752px (height). Once you have your PDF or PNG, you're ready to import it.",
+      screenshot: "/screenshots/kneeboard/create-template-guide.png", // TODO: Replace with an image showing a doc being made
     },
     {
-      question: "How do I refresh weather data (METAR/TAF)?",
+      question: "How do I import my own template (PDF/PNG)?",
       answer:
-        "While on the map screen or with a flight plan open, tap the cloud icon in the top-right corner to instantly fetch the latest weather data.",
-      screenshot: "/screenshots/BRIEFCARD_DEPARTURE.png",
+        "From the 'Templates' gallery, tap the '+' icon in the top-right corner. This will open a file importer. Select the PDF or PNG file you wish to use as a template, and it will be automatically added to your 'Custom Templates' category.",
+      screenshot: "/screenshots/kneeboard/import-template.png", // TODO: Replace with actual screenshot
     },
     {
-      question: "How can I manage my subscription?",
+      question: "How do I rename a note I've saved?",
       answer:
-        "Navigate to Settings > Subscription. From there, you can view your current subscription status and manage your plan.",
+        "While editing a note, tap the info icon (ⓘ) in the top-right toolbar. This will open the 'Note Settings' screen where you can give your note a new name and save it.",
+      screenshot: "/screenshots/kneeboard/rename-note.png", // TODO: Replace with actual screenshot
+    },
+    {
+      question: "How can I organize my saved notes?",
+      answer:
+        "You can organize notes in two ways. First, long-press on any note in the 'Your Notes' grid to 'Add to favorites'. Second, you can assign notes to categories. Long-press a note, select 'Change Category', and pick one. You can manage your categories from the folder icon in the main toolbar.",
+    },
+    {
+      question: "How do I export or share a note as a PDF?",
+      answer:
+        "From the 'Your Notes' screen, long-press (or right-click) on the note you want to export. A context menu will appear. Tap on 'Export PDF' to open the standard iOS Share Sheet, from where you can save it to your files, airdrop it, or send it via another app.",
+      screenshot: "/screenshots/kneeboard/export-pdf.png", // TODO: Replace with actual screenshot
     },
   ],
 
-  // --- USER GUIDES (UPDATED STRUCTURE) ---
-  // Each guide now has a `content` array to build the article.
-  // This allows for rich text, headings, images, and lists.
+  // --- USER GUIDES ---
   guides: [
     {
-      title: "Getting Started",
-      description: "First-time setup and interface overview.",
-      icon: <LifeBuoy className="h-5 w-5 mr-2" />,
+      title: "Getting Started: Your First Note",
+      description: "Learn the basics of creating and saving your first note.",
+      icon: <Plane className="h-5 w-5 mr-2" />,
       content: [
-        { type: "heading", text: "Welcome to Aviation EFB Pro!" },
+        { type: "heading", text: "Welcome to Kneeboard!" },
         {
           type: "paragraph",
-          text: "This guide will walk you through the initial setup and familiarize you with the main interface. Let's get you ready for your first flight.",
+          text: "This guide will walk you through creating your very first note, from selecting a template to saving your work.",
         },
-        { type: "heading", text: "1. Initial App Launch" },
+        { type: "heading", text: "1. Choose a Template" },
         {
           type: "paragraph",
-          text: "When you first open the app, you will be prompted to download the latest aeronautical database. A stable Wi-Fi connection is recommended for this step.",
+          text: "The first screen you see is the 'Templates' gallery. This is where all your available note backgrounds live. For this example, let's tap on the 'Arrival' template under the 'Brief Cards' category.",
         },
         {
           type: "image",
-          src: "/screenshots/BRIEFCARD_DEPARTURE.png",
-          alt: "Initial database download prompt",
+          src: "/screenshots/brief-card-arrival.png", // Using the image you provided
+          alt: "Selecting the Arrival brief card template",
         },
-        { type: "heading", text: "2. The Main Dashboard" },
+        { type: "heading", text: "2. Take Your Notes" },
         {
           type: "paragraph",
-          text: "The dashboard is your central hub. From here, you can create a new flight plan, view recent flights, check weather, and access settings.",
+          text: "The template will open full-screen. Use your Apple Pencil to start writing directly on the canvas. You can write down ATIS information, runway conditions, or any other notes for your arrival. Use two fingers to pinch-to-zoom or pan around the canvas.",
+        },
+        { type: "heading", text: "3. Save Your Note" },
+        {
+          type: "paragraph",
+          text: "Kneeboard saves automatically. When you are finished, simply tap the '< Back' button in the top-left corner. If you've written anything, the note will be saved and you'll see it in the 'Your Notes' tab.",
+        },
+      ],
+    },
+    {
+      title: "Mastering Your Templates",
+      description: "Importing and managing your custom templates.",
+      icon: <UploadCloud className="h-5 w-5 mr-2" />,
+      content: [
+        { type: "heading", text: "Beyond the Built-ins" },
+        {
+          type: "paragraph",
+          text: "Kneeboard's power shines when you use your own materials. You can import any PDF or PNG as a reusable template.",
+        },
+        { type: "heading", text: "1. Importing a Template" },
+        {
+          type: "paragraph",
+          text: "In the 'Templates' gallery, tap the `+` icon in the top-right corner. Your device's file browser will appear. Navigate to and select the PDF or PNG file you want to import.",
         },
         {
           type: "image",
-          src: "/screenshots/BRIEFCARD_DEPARTURE.png",
-          alt: "Main dashboard view",
+          src: "/screenshots/kneeboard/import-flow.png", // TODO: Replace with actual screenshot
+          alt: "Importing a PDF checklist",
         },
+        { type: "heading", text: "2. Finding and Using Your Template" },
+        {
+          type: "paragraph",
+          text: "Once imported, your file will appear in a new 'Custom Templates' section in the gallery. You can tap on it to create a new note just like any other template.",
+        },
+        { type: "heading", text: "3. Managing Templates" },
         {
           type: "list",
           items: [
-            "**New Flight Plan:** Starts the flight planning process.",
-            "**Map:** Opens the interactive moving map.",
-            "**Documents:** Access your saved documents and charts.",
-            "**Settings:** Configure app preferences and manage your subscription.",
+            "**Favoriting:** Long-press any template (built-in or custom) and select 'Add to favorites' to make it appear in the top 'Favorites' row for quick access.",
+            "**Deleting:** You can only delete custom templates. Long-press on a custom template and tap 'Delete your template' to permanently remove it and its associated file from the app.",
           ],
         },
       ],
     },
     {
-      title: "Mastering Checklists",
-      description: "Using standard and custom checklists.",
+      title: "Organizing Your Cockpit",
+      description: "Using categories, favorites, and search to find notes.",
       icon: <CheckSquare className="h-5 w-5 mr-2" />,
       content: [
-        { type: "heading", text: "Effective Checklist Management" },
+        { type: "heading", text: "Keeping Your Notes Tidy" },
         {
           type: "paragraph",
-          text: "Our checklist feature is designed for safety and efficiency. You can use pre-loaded standard checklists or create your own for any aircraft type.",
+          text: "As you create more notes, organization becomes key. Kneeboard provides powerful tools to keep everything in its right place.",
         },
-        { type: "heading", text: "Creating a Custom Checklist" },
+        { type: "heading", text: "1. Managing Categories" },
         {
           type: "paragraph",
-          text: 'Navigate to the "Checklists" tab and tap the `+` icon. Give your checklist a name (e.g., "Cessna 172 - Pre-flight") and start adding items.',
+          text: "In the 'Your Notes' view, tap the folder icon (`folder.badge.plus`) in the toolbar to manage your categories. Here you can add new categories (e.g., 'Cessna 172', 'IFR Training') or delete existing ones.",
         },
         {
           type: "image",
-          src: "/screenshots/efb/guide-new-checklist.png",
-          alt: "Creating a new checklist",
+          src: "/screenshots/kneeboard/manage-categories.png", // TODO: Replace with actual screenshot
+          alt: "Category management screen",
         },
+        { type: "heading", text: "2. Assigning Notes to Categories" },
         {
           type: "paragraph",
-          text: "You can add items, section headers, and notes. Drag and drop items to reorder them at any time.",
-        },
-      ],
-    },
-    {
-      title: "Advanced Flight Planning",
-      description: "Route, fuel, and W&B calculations.",
-      icon: <Plane className="h-5 w-5 mr-2" />,
-      content: [
-        { type: "heading", text: "Detailed Flight Planning" },
-        {
-          type: "paragraph",
-          text: "Go beyond basic routing with our advanced flight planning tools. Start by creating a new flight plan from the dashboard.",
-        },
-        { type: "heading", text: "Weight & Balance (W&B)" },
-        {
-          type: "paragraph",
-          text: 'After defining your route, tap the "Weight & Balance" tab. Enter passenger weights, baggage, and fuel details. The app will automatically calculate your center of gravity (CG) and display it on the envelope.',
+          text: "Long-press any note in the grid and select 'Change Category' from the context menu. Tap the desired category to assign the note to it. You can filter your notes by category using the menu on the right side of the search bar.",
         },
         {
-          type: "image",
-          src: "/screenshots/efb/guide-w-and-b.png",
-          alt: "Weight and Balance Calculator",
-        },
-        {
-          type: "paragraph",
-          text: "Ensure the calculated CG falls within the certified envelope for safe operation.",
+          type: "list",
+          items: [
+            "**Favorites:** Long-press a note and tap 'Add to favorites' to make it stand out.",
+            "**Search:** Use the search bar at the top to find notes by their name instantly.",
+          ],
         },
       ],
     },
@@ -151,9 +176,9 @@ const APP_DATA = {
 // ==================================================================
 // SUB-COMPONENT FOR THE GUIDES TAB
 // This component handles the two-column layout for the guides.
+// No changes needed here.
 // ==================================================================
 function GuidesContent() {
-  // Set the first guide as the default selected one
   const [selectedGuide, setSelectedGuide] = useState(APP_DATA.guides[0]);
 
   return (
@@ -252,6 +277,7 @@ function GuidesContent() {
 
 // ==================================================================
 // MAIN SUPPORT PAGE COMPONENT
+// No changes needed here.
 // ==================================================================
 export default function SupportPage() {
   return (
@@ -287,7 +313,6 @@ export default function SupportPage() {
 
           {/* FAQ Content */}
           <TabsContent value="faq">
-            {/* ... (This part is unchanged) ... */}
             <Card>
               <CardHeader>
                 <CardTitle>Frequently Asked Questions</CardTitle>
@@ -327,7 +352,6 @@ export default function SupportPage() {
 
           {/* Contact Content */}
           <TabsContent value="contact">
-            {/* ... (This part is unchanged) ... */}
             <Card>
               <CardHeader>
                 <CardTitle>Get in Touch</CardTitle>

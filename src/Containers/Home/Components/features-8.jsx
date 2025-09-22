@@ -96,7 +96,8 @@ export default function FeaturesSection() {
                     Secure by default
                   </h2>
                   <p className="text-foreground">
-                    Offline, self-contained, stable
+                    Offline, self-contained, stable, complies with EFB Type I
+                    requirements
                   </p>
                 </div>
               </CardContent>
@@ -269,24 +270,21 @@ export default function FeaturesSection() {
                   </div>
                   <div className="space-y-2">
                     <h2 className="text-lg font-medium transition">
-                      Keep your loved ones safe
+                      Share with colleagues, trainer or other fellow pilots
                     </h2>
-                    <p className="text-foreground">
-                      Voluptate. magnam magni doloribus dolores voluptates a
-                      sapiente inventore nisi.
-                    </p>
+                    <p className="text-foreground"></p>
                   </div>
                 </div>
                 <div className="before:bg-(--color-border) relative mt-6 before:absolute before:inset-0 before:mx-auto before:w-px sm:-my-6 sm:-mr-6">
                   <div className="relative flex h-full flex-col justify-center space-y-6 py-6">
                     <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
                       <span className="block h-fit rounded border px-2 py-1 text-xs shadow-sm">
-                        Likeur
+                        M. Gerrard
                       </span>
                       <div className="ring-background size-7 ring-4">
                         <img
                           className="size-full rounded-full"
-                          src="https://avatars.githubusercontent.com/u/102558960?v=4"
+                          src="https://randomuser.me/api/portraits/men/34.jpg"
                           alt=""
                         />
                       </div>
@@ -295,22 +293,22 @@ export default function FeaturesSection() {
                       <div className="ring-background size-8 ring-4">
                         <img
                           className="size-full rounded-full"
-                          src="https://avatars.githubusercontent.com/u/47919550?v=4"
+                          src="https://randomuser.me/api/portraits/men/66.jpg"
                           alt=""
                         />
                       </div>
                       <span className="block h-fit rounded border px-2 py-1 text-xs shadow-sm">
-                        M. Irung
+                        Steve
                       </span>
                     </div>
                     <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
                       <span className="block h-fit rounded border px-2 py-1 text-xs shadow-sm">
-                        B. Ng
+                        Mike
                       </span>
                       <div className="ring-background size-7 ring-4">
                         <img
                           className="size-full rounded-full"
-                          src="https://avatars.githubusercontent.com/u/31113941?v=4"
+                          src="https://randomuser.me/api/portraits/men/17.jpg"
                           alt=""
                         />
                       </div>

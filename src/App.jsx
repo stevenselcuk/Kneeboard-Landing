@@ -1,22 +1,29 @@
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { Spinner } from "@/components/ui/kibo-ui/spinner";
-import AboutPage from "@/Containers/About/";
-import ContactPage from "@/Containers/Contact/";
-import HomePage from "@/Containers/Home/";
-import Container from "@/Containers/index.jsx";
-import TermsPage from "@/Containers/Legal/TermsPage";
-import SupportPage from "@/Containers/Support/";
 import Trackker from "@/utils/tracker";
-import { Suspense } from "react";
+import { Suspense, lazy } from "react"; // lazy'yi import et
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import PrivacyPolicyPage from "./Containers/Legal/PrivacyPolicyPage";
+
+// --- SAYFALARI LAZY OLARAK TANIMLA ---
+const Container = lazy(() => import("@/Containers/index.jsx"));
+const HomePage = lazy(() => import("@/Containers/Home/"));
+const AboutPage = lazy(() => import("@/Containers/About/"));
+const ContactPage = lazy(() => import("@/Containers/Contact/"));
+const TermsPage = lazy(() => import("@/Containers/Legal/TermsPage"));
+const PrivacyPolicyPage = lazy(() =>
+  import("./Containers/Legal/PrivacyPolicyPage")
+); // Bu path'i kontrol et, "./" ile başlıyor
+const SupportPage = lazy(() => import("@/Containers/Support/"));
 
 export default function App() {
   return (
     <ErrorBoundary>
+      {/* Suspense zaten vardı, harika! */}
       <Suspense
         fallback={
-          <div class="grid place-items-center h-screen">
+          <div className="grid place-items-center h-screen">
+            {" "}
+            {/* class'ı className yapalım :) */}
             <Spinner key="1" variant={"ellipsis"} />
           </div>
         }
@@ -24,6 +31,7 @@ export default function App() {
         <BrowserRouter>
           <Trackker />
           <Routes>
+            {/* Container'ı lazy olarak yüklediğimiz için o da artık Suspense içinde */}
             <Route path="/" element={<Container />}>
               <Route index element={<HomePage />} />
               <Route path="/terms" element={<TermsPage />} />

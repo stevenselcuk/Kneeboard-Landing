@@ -13,10 +13,11 @@ export default function Features({ featuresRef }) {
           <Card className="group overflow-hidden shadow-zinc-950/5 sm:col-span-3 sm:rounded-none sm:rounded-tl-xl">
             <CardHeader>
               <div className="md:p-6">
-                <p className="font-medium">Advanced tracking system</p>
+                <p className="font-medium">Flexible Template System</p>
                 <p className="text-muted-foreground mt-3 max-w-sm text-sm">
-                  Quick AI lives a single hotkey away - ready to quickly appear
-                  as a floating window above your other apps..
+                  Start with our built-in templates, including Departure &
+                  Arrival brief cards, ATIS/AWOS worksheets, and various note
+                  styles (lined, grid, dot, blank).
                 </p>
               </div>
             </CardHeader>
