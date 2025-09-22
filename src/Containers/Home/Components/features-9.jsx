@@ -4,30 +4,29 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import DottedMap from "dotted-map";
-import { Activity, Map as MapIcon, MessageCircle } from "lucide-react";
+import { Map as MapIcon, MessageCircle } from "lucide-react";
 import { Area, AreaChart, CartesianGrid } from "recharts";
 
 export default function FeaturesSection() {
   return (
     <section className="px-4 py-16 md:py-32">
-      <div className="mx-auto grid max-w-5xl border md:grid-cols-2">
+      <div className="mx-auto grid max-w-5xl border md:grid-cols-2 bg-white">
         <div>
           <div className="p-6 sm:p-12">
             <span className="text-muted-foreground flex items-center gap-2">
               <MapIcon className="size-4" />
-              Real time location tracking
+              Kneeboard is ready
             </span>
 
             <p className="mt-8 text-2xl font-semibold">
-              Advanced tracking system, Instantly locate all your assets.
+              Offline and available anytime & anywhere
             </p>
           </div>
 
           <div aria-hidden className="relative">
             <div className="absolute inset-0 z-10 m-auto size-fit">
               <div className="rounded-(--radius) bg-background z-1 dark:bg-muted relative flex size-fit w-fit items-center gap-2 border px-3 py-1 text-xs font-medium shadow-md shadow-zinc-950/5">
-                <span className="text-lg">🇨🇩</span> Last connection from DR
-                Congo
+                <span className="text-lg">🇳🇱</span> Teuge Airport
               </div>
               <div className="rounded-(--radius) bg-background absolute inset-2 -bottom-2 mx-auto border px-3 py-4 text-xs font-medium shadow-md shadow-zinc-950/5 dark:bg-zinc-900"></div>
             </div>
@@ -76,28 +75,6 @@ export default function FeaturesSection() {
               </span>
             </div>
           </div>
-        </div>
-        <div className="col-span-full border-y p-12">
-          <p className="text-center text-4xl font-semibold lg:text-7xl">
-            99.99% Uptime
-          </p>
-        </div>
-        <div className="relative col-span-full">
-          <div className="absolute z-10 max-w-lg px-6 pr-12 pt-6 md:px-12 md:pt-12">
-            <span className="text-muted-foreground flex items-center gap-2">
-              <Activity className="size-4" />
-              Activity feed
-            </span>
-
-            <p className="my-8 text-2xl font-semibold">
-              Monitor your application's activity in real-time.{" "}
-              <span className="text-muted-foreground">
-                {" "}
-                Instantly identify and resolve issues.
-              </span>
-            </p>
-          </div>
-          <MonitoringChart />
         </div>
       </div>
     </section>

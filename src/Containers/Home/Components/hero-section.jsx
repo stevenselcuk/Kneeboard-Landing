@@ -76,7 +76,7 @@ export default function HeroSection({ onScrollToFeatures }) {
               <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
                 <AnimatedGroup variants={transitionVariants}>
                   <a
-                    href="/features"
+                    href="https://apps.apple.com/us/app/kneeboard-for-pilots/id6749446180"
                     className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
                   >
                     <span className="text-foreground text-sm">
@@ -181,18 +181,14 @@ export default function HeroSection({ onScrollToFeatures }) {
                 />
                 <div className="relative mx-auto max-w-6xl overflow-hidden">
                   <img
-                    className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
-                    src="/ipad-hero.png"
+                    className="bg-background relative hidden rounded-2xl dark:block"
+                    src="/filled_90.png"
                     alt="app screen"
-                    width="2700"
-                    height="auto"
                   />
                   <img
-                    className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden"
-                    src="/ipad-hero.png"
+                    className="z-2 border-border/25 relative rounded-2xl border dark:hidden"
+                    src="/filled_90.png"
                     alt="app screen"
-                    width="2700"
-                    height="auto"
                   />
                 </div>
               </div>

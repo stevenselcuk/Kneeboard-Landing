@@ -46,13 +46,13 @@ const APP_DATA = {
       question: "How do I import my own template (PDF/PNG)?",
       answer:
         "From the 'Templates' gallery, tap the '+' icon in the top-right corner. This will open a file importer. Select the PDF or PNG file you wish to use as a template, and it will be automatically added to your 'Custom Templates' category.",
-      screenshot: "/screenshots/kneeboard/import-template.png", // TODO: Replace with actual screenshot
+      screenshot: "/screenshots/import.jpeg", // TODO: Replace with actual screenshot
     },
     {
       question: "How do I rename a note I've saved?",
       answer:
         "While editing a note, tap the info icon (ⓘ) in the top-right toolbar. This will open the 'Note Settings' screen where you can give your note a new name and save it.",
-      screenshot: "/screenshots/kneeboard/rename-note.png", // TODO: Replace with actual screenshot
+      screenshot: "/screenshots/rename.jpeg", // TODO: Replace with actual screenshot
     },
     {
       question: "How can I organize my saved notes?",
@@ -63,7 +63,7 @@ const APP_DATA = {
       question: "How do I export or share a note as a PDF?",
       answer:
         "From the 'Your Notes' screen, long-press (or right-click) on the note you want to export. A context menu will appear. Tap on 'Export PDF' to open the standard iOS Share Sheet, from where you can save it to your files, airdrop it, or send it via another app.",
-      screenshot: "/screenshots/kneeboard/export-pdf.png", // TODO: Replace with actual screenshot
+      screenshot: "/screenshots/export.jpeg", // TODO: Replace with actual screenshot
     },
   ],
 
@@ -86,7 +86,7 @@ const APP_DATA = {
         },
         {
           type: "image",
-          src: "/screenshots/brief-card-arrival.png", // Using the image you provided
+          src: "/screenshots/template.jpeg", // Using the image you provided
           alt: "Selecting the Arrival brief card template",
         },
         { type: "heading", text: "2. Take Your Notes" },
@@ -118,7 +118,7 @@ const APP_DATA = {
         },
         {
           type: "image",
-          src: "/screenshots/kneeboard/import-flow.png", // TODO: Replace with actual screenshot
+          src: "/screenshots/import.jpeg", // TODO: Replace with actual screenshot
           alt: "Importing a PDF checklist",
         },
         { type: "heading", text: "2. Finding and Using Your Template" },
@@ -153,7 +153,7 @@ const APP_DATA = {
         },
         {
           type: "image",
-          src: "/screenshots/kneeboard/manage-categories.png", // TODO: Replace with actual screenshot
+          src: "/screenshots/category.jpeg", // TODO: Replace with actual screenshot
           alt: "Category management screen",
         },
         { type: "heading", text: "2. Assigning Notes to Categories" },

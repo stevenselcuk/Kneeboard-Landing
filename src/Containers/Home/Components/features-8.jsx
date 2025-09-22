@@ -188,11 +188,10 @@ export default function FeaturesSection() {
                 </div>
                 <div className="relative z-10 mt-14 space-y-2 text-center">
                   <h2 className="text-lg font-medium transition">
-                    Faster than light
+                    New templates
                   </h2>
                   <p className="text-foreground">
-                    Provident fugit vero voluptate. magnam magni doloribus
-                    dolores voluptates inventore nisi.
+                    Getting improved template library for your needs
                   </p>
                 </div>
               </CardContent>
@@ -208,8 +207,7 @@ export default function FeaturesSection() {
                       Faster than light
                     </h2>
                     <p className="text-foreground">
-                      Provident fugit vero voluptate. Voluptates a sapiente
-                      inventore nisi.
+                      State of art app performace
                     </p>
                   </div>
                 </div>

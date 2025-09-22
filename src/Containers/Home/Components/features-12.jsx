@@ -1,4 +1,3 @@
-import ChartPlaceholder from "@/assets/images/charts.jpeg";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import {
   Accordion,
@@ -19,20 +18,20 @@ export default function Features({ featuresRef }) {
 
   const imgs = {
     "item-1": {
-      img: ChartPlaceholder,
-      alt: "Database visualization",
+      img: "/feature_3.jpeg",
+      alt: "Templates",
     },
     "item-2": {
-      img: ChartPlaceholder,
+      img: "/feature_4.PNG",
       alt: "Security authentication",
     },
     "item-3": {
-      img: ChartPlaceholder,
+      img: "/feature_1.PNG",
       alt: "Identity management",
     },
     "item-4": {
-      img: ChartPlaceholder,
-      alt: "Analytics dashboard",
+      img: "/feature_2.PNG",
+      alt: "Export Options and Debrief",
     },
   };
 
@@ -121,7 +120,7 @@ export default function Features({ featuresRef }) {
 
           <div className="bg-background relative flex overflow-hidden rounded-3xl border p-2">
             <div className="w-15 absolute inset-0 right-0 ml-auto border-l bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_8px)]"></div>
-            <div className="aspect-76/59 bg-background relative w-[calc(3/4*100%+3rem)] rounded-2xl">
+            <div className="bg-background relative w-[calc(100%+3rem)] rounded-2xl">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={`${activeItem}-id`}

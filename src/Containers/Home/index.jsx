@@ -6,9 +6,7 @@ import { memo, useEffect, useRef } from "react";
 import Helmet from "react-helmet";
 import CallToAction from "./Components/call-to-action";
 import Faq4 from "./Components/faqs-4";
-import Features11 from "./Components/features-11";
 import Features12 from "./Components/features-12";
-import Features6 from "./Components/features-6";
 import Features8 from "./Components/features-8";
 import Features9 from "./Components/features-9";
 import Testimonals from "./Components/testimonials";
@@ -57,13 +55,11 @@ const LandingPage = () => {
 
       <HeroSection onScrollToFeatures={() => scrollToSection(featuresRef)} />
       <Features12 featuresRef={featuresRef} />
-      <Features6 />
       <Testimonals />
       <Features8 />
       <Features9 />
       <Faq4 />
       <CallToAction />
-      <Features11 />
     </ErrorBoundary>
   );
 };

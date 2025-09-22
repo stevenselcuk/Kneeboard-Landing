@@ -15,7 +15,7 @@ export default function CallToAction() {
           </p>
           <div className="mt-12 flex flex-wrap justify-center gap-4">
             <Button asChild size="lg">
-              <a href="/">
+              <a href="https://apps.apple.com/us/app/kneeboard-for-pilots/id6749446180">
                 <span>Get the App</span>
               </a>
             </Button>
